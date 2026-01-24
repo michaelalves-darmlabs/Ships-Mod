@@ -1,0 +1,8 @@
+{
+  "Group": "michallves",
+  "Name": "Ships",
+  "Version": "1.0.0",
+  "Description": "Plugin para navios.",
+  "Main": "com.michallves.ships.Ships",
+  "ServerVersion": "*"
+}

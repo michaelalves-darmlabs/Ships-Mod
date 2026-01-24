@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Deploy Mod",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "org.gradle.wrapper.GradleWrapperMain",
+      "classPaths": [
+        "${workspaceFolder}/gradle/wrapper/gradle-wrapper.jar"
+      ],
+      "args": [
+        "deployMod",
+        "-PserverModsPath=..\\HytaleServer\\mods"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "noDebug": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "localModsPath",
+      "type": "promptString",
+      "description": "Path to your local game mods folder",
+      "default": ""
+    }
+  ]
+}

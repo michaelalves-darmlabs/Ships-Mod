@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group = 'michallves'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+dependencies {
+    compileOnly files('libs/HytaleServer.jar')
+}
+
+jar {
+    archiveBaseName.set('ships')
+    from('src/main/resources')
+    duplicatesStrategy = 'exclude'
+}
+task deployMod(type: Copy) {
+    dependsOn 'build'
+
+    def modsPath = project.hasProperty('serverModsPath') ? project.serverModsPath : "build/deploy_fallback"
+    def resourcesPath = "${modsPath}/ships"
+
+    from(layout.buildDirectory.dir("libs")) {
+        include "*.jar"
+        into "."
+    }
+
+    from("src/main/resources") {
+        into "ships"
+    }
+
+    from("assets") {
+        into "ships/assets"
+    }
+
+    into modsPath
+
+    doLast {
+        println "✅ SUCESSO: Mod compilado e enviado!"
+        println "📦 Estrutura:"
+        println "  mods/"
+        println "  ├── ships.jar"
+        println "  └── ships/"
+        println "      ├── hytale.json"
+        println "      ├── manifest.json"
+        println "      ├── Server/"
+        println "      ├── Common/"
+        println "      └── assets/"
+    }
+}

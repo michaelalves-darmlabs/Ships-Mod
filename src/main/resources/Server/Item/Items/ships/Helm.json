@@ -1,0 +1,58 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.helm.name"
+  },
+  "Categories": [
+    "Ships.Helm"
+  ],
+  "MaxStack": 1,
+ "Recipe": {
+     "Input": [
+       { "ItemId": "Wood_Plank", "Quantity": 4 },
+       { "ItemId": "Ingot_Iron", "Quantity": 1 }
+     ],
+     "BenchRequirement": [
+        { "Type": "Crafting", "Id": "Workbench" }
+     ]
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "BlockSoundSetId": "Wood",
+    "Opacity": "Transparent",
+    "CustomModel": "Items/Helm/Helm.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Helm/Helm_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "VariantRotation": "NESW",
+    "HitboxType": "Chair",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "Simple",
+            "RunTime": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "PlayerAnimationsId": "Block",
+  "Icon": "Icons/ItemsGenerated/Helm.png",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Translation": [
+      0,
+      -5
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

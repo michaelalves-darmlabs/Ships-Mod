@@ -1,0 +1,11 @@
+{
+  "Icon": "Icons/ItemCategories/Anchor.png",
+  "Order": 3,
+  "Children": [
+    {
+      "Id": "Helm",
+      "Name": "server.ui.itemcategory.helm",
+      "Icon": "Icons/ItemCategories/Helm.png"
+    }
+  ]
+}

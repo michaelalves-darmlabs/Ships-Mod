@@ -1,0 +1,8 @@
+libs/HytaleServer.jar
+*.jar
+bin/
+build/
+core/Assets
+core/HytaleServer.jar.src
+core/ships-mod-1.7.10
+.gradle
